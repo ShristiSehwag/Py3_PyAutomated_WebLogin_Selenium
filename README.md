@@ -15,7 +15,8 @@ Automation of form submissions and input validation can be efficiently handled w
 4. Data Extraction and Web Scraping:
 Beyond testing, Selenium WebDriver is widely used for web scraping tasks where data needs to be extracted from web pages. This can involve extracting text, links, images, or structured data.
 
-## Code :
+## Code : 
+### login > click home > scrape value > save as unique text file 
 The get_driver() function initializes a Chrome WebDriver instance with specific options (ChromeOptions) to enhance browsing capabilities and avoid detection as an automated script.
 
 The script automates the login process by entering a username and password into their respective input fields (id_username and id_password). It then submits the form using Keys.RETURN, simulating an Enter key press.
@@ -25,3 +26,5 @@ time.sleep() calls are used strategically throughout the script to introduce del
 After successful login, the script navigates to the home page by locating and clicking on an element identified by its XPath ('/html/body/nav/div/a'). This demonstrates how to interact with page elements using XPath expressions.
 
 The script extracts text from an element located by another XPath ('/html/body/div[1]/div/h1[2]'). It then processes this text to clean and extract relevant data using the clean_text() function, which isolates and converts the temperature data from a string format.
+
+Further the code writes writes that text to a unique .txt file using thhe datetime.
